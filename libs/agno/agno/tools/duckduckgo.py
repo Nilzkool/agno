@@ -15,8 +15,8 @@ class DuckDuckGoTools(Toolkit):
     DuckDuckGoTools provides easy access to DuckDuckGo search and news.
 
     Args:
-        enable_search (bool): Enables the general search functionality.
-        enable_news (bool): Enables the news search functionality.
+        allow_search (bool): Enables the general search functionality.
+        allow_news (bool): Enables the news search functionality.
         request_modifier (Optional[str]): Text to prepend or append to each query.
         max_output (Optional[int]): Fixed number of maximum results to return.
         request_headers (Optional[Any]): Custom headers for HTTP requests.
@@ -28,8 +28,8 @@ class DuckDuckGoTools(Toolkit):
 
     def __init__(
         self,
-        enable_search: bool = True,
-        enable_news: bool = True,
+        allow_search: bool = True,
+        allow_news: bool = True,
         request_modifier: Optional[str] = None,
         max_output: Optional[int] = None,
         request_headers: Optional[Any] = None,
@@ -48,9 +48,9 @@ class DuckDuckGoTools(Toolkit):
         self.ssl_check = ssl_check
 
         toolset = []
-        if enable_search:
+        if allow_search:
             toolset.append(self.search_duckduckgo)
-        if enable_news:
+        if allow_news:
             toolset.append(self.fetch_duckduckgo_news)
 
         super().__init__(name="duckduckgo", tools=toolset, **kwargs)
