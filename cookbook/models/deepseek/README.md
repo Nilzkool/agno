@@ -1,6 +1,8 @@
 # DeepSeek Cookbook
 
 > Note: Fork and clone this repository if needed
+> 
+> **Note:** DeepSeek's support for structured outputs is currently broken and not recommended.
 
 ### 1. Create and activate a virtual environment
 
@@ -43,9 +45,4 @@ python cookbook/models/deepseek/basic.py
 python cookbook/models/deepseek/tool_use.py
 ```
 
-### 6. Run Agent that returns structured output
-
-```shell
-python cookbook/models/deepseek/structured_output.py
-```
-
+<!-- Removed structured output example: not supported -->

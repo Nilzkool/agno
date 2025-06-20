@@ -13,7 +13,7 @@ source ~/.venvs/aienv/bin/activate
 ### Install libraries
 
 ```shell
-pip install -U qdrant-client pypdf openai agno
+pip install -U qdrant-client pypdf openai pymongo[srv] agno
 ```
 
 ## Test your VectorDB
@@ -23,7 +23,6 @@ pip install -U qdrant-client pypdf openai agno
 ```shell
 python cookbook/vector_dbs/cassandra_db.py
 ```
-
 
 ### ChromaDB
 
@@ -98,6 +97,25 @@ docker run -d \
 python cookbook/vector_dbs/pg_vector.py
 ```
 
+### MongoDB
+
+> Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) first or connect to Atlas.
+
+- Run a local MongoDB container
+
+```shell
+docker run -d -p 27017:27017 --name mongodb-container \
+  -v ./tmp/mongo-data:/data/db mongo:latest
+```
+
+- OR provide your MongoDB Atlas connection string via `MONGO_URL`.
+
+#### Run the MongoDB example
+
+```shell
+python cookbook/agent_concepts/knowledge/vector_dbs/mongo_db/mongo_db.py
+```
+
 ### Mem0
 
 ```shell
@@ -154,7 +172,6 @@ export OPENAI_API_KEY="sk-..."
 ```shell
 python cookbook/vector_dbs/singlestore.py
 ```
-
 
 ### Qdrant
 
