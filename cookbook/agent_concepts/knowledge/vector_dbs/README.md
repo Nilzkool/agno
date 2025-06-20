@@ -13,17 +13,31 @@ source ~/.venvs/aienv/bin/activate
 ### Install libraries
 
 ```shell
-pip install -U qdrant-client pypdf openai agno
+pip install -U qdrant-client pypdf openai agno pymongo
 ```
 
+> Note: `pymongo` is required for the MongoDB example below.
+
 ## Test your VectorDB
+
+### MongoDB
+
+> Ensure you have a running MongoDB instance (local or Atlas).
+
+```shell
+# If you need a local instance:
+docker run -d -p 27017:27017 --name mongodb mongo:latest
+```
+
+```shell
+python cookbook/agent_concepts/knowledge/vector_dbs/mongo_db/mongo_db.py
+```
 
 ### Cassandra DB
 
 ```shell
 python cookbook/vector_dbs/cassandra_db.py
 ```
-
 
 ### ChromaDB
 

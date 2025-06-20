@@ -8,7 +8,7 @@ Application of several agent concepts using Agno.
 
 Async refers to agents built with `async def` support, allowing them to seamlessly integrate into asynchronous Python applications. While async agents are not inherently parallel, they allow better handling of I/O-bound operations, improving responsiveness in Python apps.
 
-For examples of using async agents, see /cookbook/agent_concepts/async/.
+For examples of using async agents, see `/cookbook/agent_concepts/async/`.
 
 ### Hybrid Search
 
@@ -37,7 +37,7 @@ Examples of Agents using different memory types can be found under `/cookbook/ag
 
 In addition to text, Agno agents support image, audio, and video inputs and can generate image and audio outputs.
 
-Examples with multimodal input and outputs using Agno can be found under `/cookbook/agent_concepts/storage/`
+Examples with multimodal input and outputs using Agno can be found under `/cookbook/agent_concepts/multimodal/`
 
 ### RAG
 
@@ -49,7 +49,7 @@ Examples of agentic RAG can be found under `/cookbook/agent_concepts/rag/`
 
 Reasoning is an *experimental feature* that enables an Agent to think through a problem step-by-step before jumping into a response. The Agent works through different ideas, validating and correcting as needed. Once it reaches a final answer, it will validate and provide a response.
 
-Examples of agentic shwowing their reasoning can be found under `/cookbook/agent_concepts/reasoning/`
+Examples of agentic showing their reasoning can be found under `/cookbook/agent_concepts/reasoning/`
 
 ### Storage
 
