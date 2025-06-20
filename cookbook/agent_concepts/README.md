@@ -49,7 +49,7 @@ Examples of agentic RAG can be found under `/cookbook/agent_concepts/rag/`
 
 Reasoning is an *experimental feature* that enables an Agent to think through a problem step-by-step before jumping into a response. The Agent works through different ideas, validating and correcting as needed. Once it reaches a final answer, it will validate and provide a response.
 
-Examples of agentic shwowing their reasoning can be found under `/cookbook/agent_concepts/reasoning/`
+Examples of agentic showing their reasoning can be found under `/cookbook/agent_concepts/reasoning/`
 
 ### Storage
 
