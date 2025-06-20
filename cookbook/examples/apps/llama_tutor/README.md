@@ -15,8 +15,7 @@ Llama Tutor is a powerful educational AI assistant that combines:
 
 ## Tech stack
 
-- Llama 3.1 70B from Meta for the LLM
-- Groq for LLM inference
+- groq:llama-3.3-70b-versatile (Groq LLM for inference)
 - DuckDuckGo and Exa for the search API
 
 ## Cloning & running
