@@ -63,7 +63,7 @@ Make sure all tests pass before submitting your pull request. If you add new fea
 2. Create a new directory under `libs/agno/agno/vectordb` for the new vector database.
 3. Create a Class for your VectorDb that implements the `VectorDb` interface
    - Your Class will be in the `libs/agno/agno/vectordb/<your_db>/<your_db>.py` file.
-   - The `VectorDb` interface is defined in `libs/agno/agno/vectordb/base
+   - The `VectorDb` interface is defined in `libs/agno/agno/vectordb/base`
    - Import your `VectorDb` Class in `libs/agno/agno/vectordb/<your_db>/__init__.py`.
    - Checkout the [`libs/agno/agno/vectordb/pgvector/pgvector`](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/vectordb/pgvector/pgvector.py) file for an example.
 4. Add a recipe for using your `VectorDb` under `cookbook/agent_concepts/knowledge/vector_dbs/<your_db>`.
@@ -92,11 +92,11 @@ Make sure all tests pass before submitting your pull request. If you add new fea
 
 1. Setup your local environment by following the [Development setup](#development-setup).
 2. Create a new directory under `libs/agno/agno/tools` for the new Tool.
-3. Create a Class for your Tool that inherits the `Toolkit` Class from `libs/agno/agno/tools/toolkit/.py`.
+3. Create a Class for your Tool that inherits the `Toolkit` Class from `libs/agno/agno/tools/toolkit.py`.
    - Your Class will be in `libs/agno/agno/tools/<your_tool>.py`.
    - Make sure to register all functions in your class via a flag.
-   - Checkout the [`agno/tools/youtube_tools.py`](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/youtube_tools.py) file for an example.
-   - If your tool requires an API key, checkout the [`agno/tools/serpapi_tools.py`](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/serpapi_tools.py) as well.
+   - Checkout the [`agno/tools/youtube.py`](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/youtube.py) file for an example.
+   - If your tool requires an API key, checkout the [`agno/tools/serpapi.py`](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/serpapi.py) as well.
 4. Add a recipe for using your Tool under `cookbook/tools/<your_tool>`.
    - Checkout [`agno/cookbook/tools/youtube_tools`](https://github.com/agno-agi/agno/blob/main/cookbook/tools/youtube_tools.py) for an example.
 5. Important: Format and validate your code by running `./scripts/format.sh` and `./scripts/validate.sh`.
