@@ -23,31 +23,22 @@ pip install -U openai duckduckgo-search duckdb yfinance agno
 
 ### 4. Run basic Agent
 
-- Streaming on
-
-```shell
-python cookbook/models/fireworks/basic_stream.py
-```
-
-- Streaming off
+- Non-streaming
 
 ```shell
 python cookbook/models/fireworks/basic.py
 ```
 
-### 5. Run Agent with Tools
+### 5. Run basic async Agent
 
-- DuckDuckGo Search
-
-```shell
-python cookbook/models/fireworks/tool_use.py
-```
-
-
-### 6. Run Agent that returns structured output
+- Non-streaming
 
 ```shell
-python cookbook/models/fireworks/structured_output.py
+python cookbook/models/fireworks/async_basic.py
 ```
 
+- Streaming
 
+```shell
+python cookbook/models/fireworks/async_basic_stream.py
+```

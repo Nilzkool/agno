@@ -21,31 +21,22 @@ export DEEPSEEK_API_KEY=***
 pip install -U openai duckduckgo-search duckdb yfinance agno
 ```
 
-### 4. Run basic Agent
-
-- Streaming on
-
-```shell
-python cookbook/models/deepseek/basic_stream.py
-```
-
-- Streaming off
+### 4. Run basic Agent (synchronous)
 
 ```shell
 python cookbook/models/deepseek/basic.py
 ```
 
-### 5. Run Agent with Tools
+### 5. Run basic async Agent
 
-- DuckDuckGo Search
-
-```shell
-python cookbook/models/deepseek/tool_use.py
-```
-
-### 6. Run Agent that returns structured output
+- Non-streaming
 
 ```shell
-python cookbook/models/deepseek/structured_output.py
+python cookbook/models/deepseek/async_basic.py
 ```
 
+- Streaming
+
+```shell
+python cookbook/models/deepseek/async_basic_streaming.py
+```

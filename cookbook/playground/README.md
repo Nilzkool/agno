@@ -66,7 +66,16 @@ python cookbook/playground/grok_agents.py
 
 ## Groq Agents
 
+Before running the Groq Agents UI, set your Groq API key and install the required libraries:
+
 ```shell
+# Set the GROQ API key
+export GROQ_API_KEY=***
+
+# Install Groq and related dependencies
+pip install -U groq duckduckgo-search yfinance pypdf sqlalchemy 'fastapi[standard]' youtube-transcript-api agno
+
+# Launch the Groq Agents UI
 python cookbook/playground/groq_agents.py
 ```
 
