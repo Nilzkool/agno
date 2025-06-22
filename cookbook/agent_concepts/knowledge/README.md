@@ -41,9 +41,7 @@ docker run -d \
   agnohq/pgvector:16
 ```
 
-### 4. Test Knowledge Cookbooks
-
-Eg: PDF URL Knowledge Base
+### 4. Test Knowledge Cookbooks (PDF URL Knowledge Base)
 
 - Install libraries
 
@@ -55,4 +53,36 @@ pip install -U pypdf bs4
 
 ```shell
 python cookbook/agent_concepts/knowledge/pdf_url.py
+```
+
+### 5. Test Chunking Strategies
+
+These examples show how to split documents into chunks before indexing:
+
+- Agentic Chunking
+
+```shell
+python cookbook/agent_concepts/knowledge/chunking/agentic_chunking.py
+```
+
+- Recursive Chunking
+
+```shell
+python cookbook/agent_concepts/knowledge/chunking/recursive_chunking.py
+```
+
+- Document Chunking
+
+```shell
+python cookbook/agent_concepts/knowledge/chunking/document_chunking.py
+```
+
+### 6. Test Vector DB Configuration
+
+Demonstrates custom vector database setups:
+
+- PgVector DB (default table)
+
+```shell
+python cookbook/agent_concepts/knowledge/vector_dbs/pgvector_db/pg_vector.py
 ```

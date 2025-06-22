@@ -25,12 +25,12 @@ python3 -m venv ~/.venvs/aienv
 source ~/.venvs/aienv/bin/activate
 ```
 
-### 2. Export your AWS Credentials
+### 2. Export your IBM WatsonX credentials
 
 ```shell
 export IBM_WATSONX_API_KEY=***
 export IBM_WATSONX_PROJECT_ID=***
-export IBM_WATSONX_URL=*** (optional, defaults to https://eu-de.ml.cloud.ibm.com)
+export IBM_WATSONX_URL=***  # optional, defaults to https://eu-de.ml.cloud.ibm.com
 ```
 
 ### 3. Install libraries

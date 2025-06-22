@@ -43,9 +43,11 @@ python cookbook/models/deepseek/basic.py
 python cookbook/models/deepseek/tool_use.py
 ```
 
-### 6. Run Agent that returns structured output
+### 6. Structured output support
+
+> Note: DeepSeek's native structured output support is currently broken.
+> The structured_output example may not produce structured outputs.
 
 ```shell
 python cookbook/models/deepseek/structured_output.py
 ```
-

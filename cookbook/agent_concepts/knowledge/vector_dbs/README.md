@@ -18,12 +18,18 @@ pip install -U qdrant-client pypdf openai agno
 
 ## Test your VectorDB
 
+### MongoDB
+> Install pymongo: `pip install pymongo`
+
+```shell
+python cookbook/agent_concepts/knowledge/vector_dbs/mongo_db/mongo_db.py
+```
+
 ### Cassandra DB
 
 ```shell
 python cookbook/vector_dbs/cassandra_db.py
 ```
-
 
 ### ChromaDB
 

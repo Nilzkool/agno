@@ -8,7 +8,7 @@ Application of several agent concepts using Agno.
 
 Async refers to agents built with `async def` support, allowing them to seamlessly integrate into asynchronous Python applications. While async agents are not inherently parallel, they allow better handling of I/O-bound operations, improving responsiveness in Python apps.
 
-For examples of using async agents, see /cookbook/agent_concepts/async/.
+For examples of using async agents, see `/cookbook/agent_concepts/async/`.
 
 ### Hybrid Search
 
@@ -37,7 +37,7 @@ Examples of Agents using different memory types can be found under `/cookbook/ag
 
 In addition to text, Agno agents support image, audio, and video inputs and can generate image and audio outputs.
 
-Examples with multimodal input and outputs using Agno can be found under `/cookbook/agent_concepts/storage/`
+Examples with multimodal input and outputs using Agno can be found under `/cookbook/agent_concepts/multimodal/`
 
 ### RAG
 
@@ -75,4 +75,4 @@ Examples of using tools with Agno agents can be found under `/cookbook/agent_con
 
 Vector databases enable us to store information as embeddings and search for “results similar” to our input query using cosine similarity or full text search. These results are then provided to the Agent as context so it can respond in a context-aware manner using Retrieval Augmented Generation (RAG).
 
-Examples of using vector databases with Agno can be found under `/cookbook/agent_concepts/vector_dbs/`
+Examples of using vector databases with Agno can be found under `/cookbook/agent_concepts/knowledge/vector_dbs/`
