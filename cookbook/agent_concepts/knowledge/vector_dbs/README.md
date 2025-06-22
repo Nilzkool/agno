@@ -13,7 +13,7 @@ source ~/.venvs/aienv/bin/activate
 ### Install libraries
 
 ```shell
-pip install -U qdrant-client pypdf openai agno
+pip install -U qdrant-client pypdf openai agno pymongo
 ```
 
 ## Test your VectorDB
@@ -21,14 +21,13 @@ pip install -U qdrant-client pypdf openai agno
 ### Cassandra DB
 
 ```shell
-python cookbook/vector_dbs/cassandra_db.py
+python cookbook/agent_concepts/knowledge/vector_dbs/cassandra_db/cassandra_db.py
 ```
-
 
 ### ChromaDB
 
 ```shell
-python cookbook/vector_dbs/chroma_db.py
+python cookbook/agent_concepts/knowledge/vector_dbs/chroma_db/chroma_db.py
 ```
 
 ### Clickhouse
@@ -61,13 +60,13 @@ docker run -d \
 #### Run the agent
 
 ```shell
-python cookbook/vector_dbs/clickhouse.py
+python cookbook/agent_concepts/knowledge/vector_dbs/clickhouse_db/clickhouse.py
 ```
 
 ### LanceDB
 
 ```shell
-python cookbook/vector_dbs/lance_db.py
+python cookbook/agent_concepts/knowledge/vector_dbs/lance_db/lance_db.py
 ```
 
 ### PgVector
@@ -95,25 +94,25 @@ docker run -d \
 ```
 
 ```shell
-python cookbook/vector_dbs/pg_vector.py
+python cookbook/agent_concepts/knowledge/vector_dbs/pgvector/pg_vector.py
 ```
 
 ### Mem0
 
 ```shell
-python cookbook/vector_dbs/mem0.py
+python cookbook/agent_concepts/knowledge/vector_dbs/mem0/mem0.py
 ```
 
 ### Milvus
 
 ```shell
-python cookbook/vector_dbs/milvus.py
+python cookbook/agent_concepts/knowledge/vector_dbs/milvus/milvus.py
 ```
 
 ### Pinecone DB
 
 ```shell
-python cookbook/vector_dbs/pinecone_db.py
+python cookbook/agent_concepts/knowledge/vector_dbs/pinecone_db/pinecone_db.py
 ```
 
 ### Singlestore
@@ -152,9 +151,8 @@ export OPENAI_API_KEY="sk-..."
 #### Run Agent
 
 ```shell
-python cookbook/vector_dbs/singlestore.py
+python cookbook/agent_concepts/knowledge/vector_dbs/singlestore/singlestore.py
 ```
-
 
 ### Qdrant
 
@@ -163,7 +161,7 @@ docker run -p 6333:6333 -p 6334:6334 -v $(pwd)/qdrant_storage:/qdrant/storage:z 
 ```
 
 ```shell
-python cookbook/vector_dbs/qdrant_db.py
+python cookbook/agent_concepts/knowledge/vector_dbs/qdrant/qdrant_db.py
 ```
 
 ### Weaviate
@@ -173,5 +171,15 @@ python cookbook/vector_dbs/qdrant_db.py
 ```
 
 ```shell
-python cookbook/vector_dbs/weaviate_db.py
+python cookbook/agent_concepts/knowledge/vector_dbs/weaviate_db/weaviate_db.py
+```
+
+### MongoDB
+
+> Install pymongo: `pip install "pymongo[srv]"` or `pip install pymongo`
+
+Ensure you have a MongoDB instance (Atlas or local) running. Update the connection string in the example below as needed.
+
+```shell
+python cookbook/agent_concepts/knowledge/vector_dbs/mongo_db/mongo_db.py
 ```

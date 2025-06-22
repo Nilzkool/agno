@@ -1,33 +1,28 @@
 # Agentic RAG
 
-**RAG:** is a technique that allows an Agent to search for information to improve its responses. This directory contains a series of cookbooks that demonstrate how to build a RAG for the Agent.
+**RAG:** is a technique that allows an Agent to search for information to improve its responses. This directory contains a series of cookbooks that demonstrate how to build a RAG-enabled Agent.
 
 ### 1. Create a virtual environment
 
-```shell
+```bash
 python3 -m venv ~/.venvs/aienv
 source ~/.venvs/aienv/bin/activate
 ```
 
 ### 2. Install libraries
 
-```shell
+```bash
 pip install -U openai sqlalchemy "psycopg[binary]" pgvector lancedb tantivy pypdf sqlalchemy "fastapi[standard]" agno
 ```
 
-### 3. Run PgVector
+### 3. Launch PgVector
 
-> Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) first.
+> Install [Docker Desktop](https://docs.docker.com/desktop/install/) first.
 
-- Run using a helper script
+Run PostgreSQL with PgVector support:
 
-```shell
-./cookbook/scripts/run_pgvector.sh
-```
-
-- OR run using the docker run command
-
-```shell
+```bash
+# Using Docker
 docker run -d \
   -e POSTGRES_DB=ai \
   -e POSTGRES_USER=ai \
@@ -41,14 +36,14 @@ docker run -d \
 
 ### 4. Run the Traditional RAG with PgVector
 
-```shell
+```bash
 python cookbook/agent_concepts/rag/traditional_rag_pgvector.py
 ```
 
 ### 5. Run the Agentic RAG with PgVector
 
-```shell
+```bash
 python cookbook/agent_concepts/rag/agentic_rag_pgvector.py
 ```
 
-Continue to run the other RAG examples as you want.
+Continue to explore the other RAG examples as desired.

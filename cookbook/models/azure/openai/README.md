@@ -17,7 +17,7 @@ Navigate to the AzureOpenAI on the [Azure Portal](https://portal.azure.com/) and
 export AZURE_OPENAI_API_KEY=***
 export AZURE_OPENAI_ENDPOINT="https://<your-resource-name>.openai.azure.com/openai/deployments/<your-deployment-name>"
 export AZURE_API_VERSION="2024-10-21"  # Optional
-export AZURE_DEPLOYMENT=***  # Optional
+export AZURE_OPENAI_DEPLOYMENT=***  # Optional
 ```
 
 ### 3. Install libraries
@@ -31,7 +31,7 @@ pip install -U openai duckduckgo-search duckdb yfinance agno
 - Streaming on
 
 ```shell
-python cookbook/models/azure/openai/basic_stream.py
+python cookbook/models/azure/openai/async_basic.py
 ```
 
 - Streaming off

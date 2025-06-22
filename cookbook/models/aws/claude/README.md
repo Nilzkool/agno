@@ -14,10 +14,12 @@ source ~/.venvs/aienv/bin/activate
 ### 2. Export your AWS Credentials
 
 ```shell
-export AWS_ACCESS_KEY_ID=***
-export AWS_SECRET_ACCESS_KEY=***
+export AWS_ACCESS_KEY=***
+export AWS_SECRET_KEY=***
 export AWS_REGION=***
 ```
+
+> Note: code reads `AWS_ACCESS_KEY` and `AWS_SECRET_KEY`. If you have `AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`, set them accordingly.
 
 Alternatively, you can use an AWS profile:
 
@@ -33,7 +35,7 @@ agent = Agent(
 ### 3. Install libraries
 
 ```shell
-pip install -U anthropic duckduckgo-search agno
+pip install -U anthropic[bedrock] duckduckgo-search agno
 ```
 
 ### 4. Run basic agent
