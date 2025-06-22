@@ -7,7 +7,7 @@
 Run your chat model
 
 ```shell
-ollama pull llama3.1:8b
+ollama pull llama3.1
 ```
 
 ### 2. Create and activate a virtual environment

@@ -26,13 +26,13 @@ pip install -U duckduckgo-search duckdb agno
 - Streaming on
 
 ```shell
-python cookbook/models/cohere/basic_stream.py
+python cookbook/models/perplexity/basic_stream.py
 ```
 
 - Streaming off
 
 ```shell
-python cookbook/models/cohere/basic.py
+python cookbook/models/perplexity/basic.py
 ```
 
 ### 5. Run Agent with Tools
@@ -40,7 +40,7 @@ python cookbook/models/cohere/basic.py
 - DuckDuckGo Search
 
 ```shell
-python cookbook/models/cohere/tool_use.py
+python cookbook/models/perplexity/tool_use.py
 ```
 
 ### 6. Run Agent with Knowledge
@@ -48,4 +48,3 @@ python cookbook/models/cohere/tool_use.py
 ```shell
 python cookbook/models/perplexity/knowledge.py
 ```
-

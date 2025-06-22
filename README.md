@@ -54,7 +54,7 @@ Agno is simple, fast and model-agnostic. Here are some key features:
 - **Natively Multi Modal**: Agno Agents are natively multi modal, they can take in text, image, audio and video and generate text, image, audio and video as output.
 - **Advanced Multi Agent Architecture**: Agno provides an industry leading multi-agent architecture (**Agent Teams**) with 3 different modes: `route`, `collaborate` and `coordinate`.
 - **Agentic Search built-in**: Give your Agents the ability to search for information at runtime using one of 20+ vector databases. Get access to state-of-the-art Agentic RAG that uses hybrid search with re-ranking. **Fully async and highly performant.**
-- **Long-term Memory & Session Storage**: Agno provides plug-n-play `Storage` & `Memory` drivers that give your Agents long-term memory and session storage.
+- **Long-term Memory & Session Storage**: Agno provides plug-n-play `Storage` & `Memory` drivers that give your Agents long-term memory and session storage, including the ability to retain **user-specific memories** and generate **session summaries**.
 - **Pre-built FastAPI Routes**: Agno provides pre-built FastAPI routes to serve your Agents, Teams and Workflows.
 - **Structured Outputs**: Agno Agents can return fully-typed responses using model provided structured outputs or `json_mode`.
 - **Monitoring**: Monitor agent sessions and performance in real-time on [agno.com](https://app.agno.com).

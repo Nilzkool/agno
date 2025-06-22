@@ -19,7 +19,7 @@ If you want to use the Gemini API, you need to export the following environment 
 export GOOGLE_API_KEY=***
 ```
 
-If you want to use Vertex AI, you need to export the following environment variables:
+If you want to use Vertex AI, you need to export the following environment variables, or pass them as parameters to the `Gemini` class:
 
 ```shell
 export GOOGLE_GENAI_USE_VERTEXAI="true"
@@ -101,4 +101,10 @@ python cookbook/models/google/gemini/video_agent_input_bytes_content.py
 
 ```shell
 python cookbook/models/google/gemini/flash_thinking_agent.py
+```
+
+### 13. Run Agent that uses Vertex AI
+
+```shell
+python cookbook/models/google/gemini/vertexai.py
 ```

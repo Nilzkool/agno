@@ -1,4 +1,4 @@
-# Agentic RAG Agent
+<h1>Agentic RAG Agent</h1>
 
 **Agentic RAG Agent** is a chat application that combines models with retrieval-augmented generation.
 It allows users to ask questions based on custom knowledge bases, documents, and web data, retrieve context-aware answers, and maintain chat history across sessions.
@@ -62,7 +62,7 @@ docker run -d \
 streamlit run cookbook/examples/apps/agentic_rag/app.py
 ```
 
-## 🔧 Customization
+## 
 
 ### Model Selection
 
@@ -82,15 +82,12 @@ The application supports multiple model providers:
 - **Docker Connection Refused**: Ensure `pgvector`  containers are running (`docker ps`).
 - **OpenAI API Errors**: Verify that the `OPENAI_API_KEY` is set and valid.
 
-## 📚 Documentation
+## 
 
 For more detailed information:
 - [Agno Documentation](https://docs.agno.com)
 - [Streamlit Documentation](https://docs.streamlit.io)
 
-## 🤝 Support
+## 
 
 Need help? Join our [Discord community](https://agno.link/discord)
-
-
-
