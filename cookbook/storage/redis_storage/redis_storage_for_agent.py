@@ -1,6 +1,6 @@
 """
 Test script for RedisStorage implementation.
-Run `pip install redis duckduckgo-search openai` to install dependencies.
+Run `pip install agno redis duckduckgo-search openai` to install dependencies.
 
 We can start Redis locally using docker:
 1. Start Redis container

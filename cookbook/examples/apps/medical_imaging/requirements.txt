@@ -1,4 +1,3 @@
-agno
-openai
+agno[google]
 streamlit
 duckduckgo-search

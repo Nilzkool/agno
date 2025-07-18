@@ -35,13 +35,12 @@ web_searcher = Agent(
     add_datetime_to_instructions=True,
 )
 
-
 hn_team = Team(
     name="HackerNews Team",
     mode="coordinate",
     model=OpenAIChat("gpt-4o"),
     members=[hn_researcher, web_searcher],
-    storage=JsonStorage(dir_path="tmp/team_sessions_json"),
+    storage=JsonStorage(dir_path="tmp/team_sessions_json", mode="team"),
     instructions=[
         "First, search hackernews for what the user is asking about.",
         "Then, ask the web searcher to search for each story to get more information.",

@@ -83,7 +83,7 @@ if __name__ == "__main__":
     # Run workflow
     report: Iterator[RunResponse] = HackerNewsReporter(
         storage=DynamoDbStorage(
-            table_name="workflow_sessions", region_name="us-east-1"
+            table_name="workflow_sessions", region_name="us-east-1", mode="workflow"
         ),
         debug_mode=False,
     ).run(num_stories=5)

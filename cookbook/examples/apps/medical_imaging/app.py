@@ -78,8 +78,8 @@ def main():
                         # Read the image file as binary
                         with open(image_path, "rb") as f:
                             image_bytes = f.read()
-                        # creating an instance of Image
-                        agno_image = AgnoImage(content=image_bytes, format="png")
+                        # creating an instance of AgnoImage
+                        agno_image = AgnoImage(content=image_bytes)
 
                         prompt = (
                             f"Analyze this medical image considering the following context: {additional_info}"

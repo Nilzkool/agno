@@ -27,13 +27,12 @@ pip install -U openai 'litellm[proxy]' duckduckgo-search duckdb yfinance agno
 litellm --model gpt-4o --host 127.0.0.1 --port 4000
 ```
 
-
 ### 5. Run basic Agent
 
 - Streaming on
 
 ```shell
-python cookbook/models/litellm_proxy/basic_stream.py
+python cookbook/models/litellm_openai/basic_stream.py
 ```
 
 ### 6. Run Agent with Tools
@@ -41,5 +40,5 @@ python cookbook/models/litellm_proxy/basic_stream.py
 - DuckDuckGo Search
 
 ```shell
-python cookbook/models/litellm_proxy/tool_use.py
+python cookbook/models/litellm_openai/tool_use.py
 ```

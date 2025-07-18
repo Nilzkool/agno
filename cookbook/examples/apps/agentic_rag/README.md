@@ -5,61 +5,47 @@ It allows users to ask questions based on custom knowledge bases, documents, and
 
 > Note: Fork and clone this repository if needed
 
-### 1. Create a virtual environment
+### 1. Change directory
+
+```shell
+cd cookbook/examples/apps/agentic_rag
+```
+
+### 2. Create a virtual environment
 
 ```shell
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 2. Install dependencies
+### 3. Install dependencies
 
 ```shell
-pip install -r cookbook/examples/apps/agentic_rag/requirements.txt
-```
-
-### 3. Configure API Keys
-
-Required:
-```bash
-export OPENAI_API_KEY=your_openai_key_here
-```
-
-Optional (for additional models):
-```bash
-export ANTHROPIC_API_KEY=your_anthropic_key_here
-export GOOGLE_API_KEY=your_google_key_here
-export GROQ_API_KEY=your_groq_key_here
+pip install -r requirements.txt
 ```
 
 ### 4. Run PgVector
 
-> Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) first.
+> Install [Docker Desktop](https://docs.docker.com/desktop/install/) first.
 
-- Run using a helper script
-
-```shell
-./cookbook/scripts/run_pgvector.sh
-```
-
-- OR run using the docker run command
+Start a PostgreSQL container with the pgvector extension:
 
 ```shell
 docker run -d \
+  --name pgvector \
   -e POSTGRES_DB=ai \
   -e POSTGRES_USER=ai \
   -e POSTGRES_PASSWORD=ai \
   -e PGDATA=/var/lib/postgresql/data/pgdata \
   -v pgvolume:/var/lib/postgresql/data \
   -p 5532:5432 \
-  --name pgvector \
   agnohq/pgvector:16
 ```
 
 ### 5. Run Agentic RAG App
 
 ```shell
-streamlit run cookbook/examples/apps/agentic_rag/app.py
+streamlit run app.py
 ```
 
 ## 🔧 Customization
@@ -74,12 +60,12 @@ The application supports multiple model providers:
 
 ### How to Use
 - Open [localhost:8501](http://localhost:8501) in your browser.
-- Upload documents or provide URLs (websites, csv, txt, and PDFs) to build a knowledge base.
+- Upload documents or provide URLs (websites, CSV, TXT, and PDFs) to build a knowledge base.
 - Enter questions in the chat interface and get context-aware answers.
-- The app can also answer question using duckduckgo search without any external documents added.
+- The app can also answer questions using DuckDuckGo search without any external documents added.
 
 ### Troubleshooting
-- **Docker Connection Refused**: Ensure `pgvector`  containers are running (`docker ps`).
+- **Docker Connection Refused**: Ensure the `pgvector` container is running (`docker ps`).
 - **OpenAI API Errors**: Verify that the `OPENAI_API_KEY` is set and valid.
 
 ## 📚 Documentation
@@ -91,6 +77,3 @@ For more detailed information:
 ## 🤝 Support
 
 Need help? Join our [Discord community](https://agno.link/discord)
-
-
-

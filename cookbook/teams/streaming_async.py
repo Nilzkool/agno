@@ -6,6 +6,7 @@ from agno.models.openai import OpenAIChat
 from agno.team.team import Team
 from agno.tools.yfinance import YFinanceTools
 
+
 stock_searcher = Agent(
     name="Stock Searcher",
     model=OpenAIChat("gpt-4o"),
@@ -31,7 +32,6 @@ company_info_agent = Agent(
     ],
 )
 
-
 team = Team(
     name="Stock Research Team",
     mode="route",
@@ -41,7 +41,11 @@ team = Team(
     show_members_responses=True,
 )
 
+async def main():
+    # Stream responses and print each chunk
+    response_stream = await team.arun("What is the current stock price of NVDA?", stream=True)
+    async for chunk in response_stream:
+        print(chunk.content)
+
 if __name__ == "__main__":
-    asyncio.run(
-        team.aprint_response("What is the current stock price of NVDA?", stream=True)
-    )
+    asyncio.run(main())

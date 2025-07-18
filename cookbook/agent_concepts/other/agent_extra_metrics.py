@@ -15,7 +15,7 @@ agent = Agent(
     model=OpenAIChat(
         id="gpt-4o-audio-preview",
         modalities=["text", "audio"],
-        audio={"voice": "sage", "format": "wav"},
+        audio={"voice": "alloy", "format": "wav"},
     ),
     markdown=True,
     debug_mode=True,
@@ -42,7 +42,6 @@ agent.print_response(
 )
 # Showing reasoning tokens metrics
 print(f"Reasoning tokens: {agent.run_response.metrics['reasoning_tokens']}")
-
 
 agent = Agent(
     model=OpenAIChat(id="gpt-4o-mini"), markdown=True, telemetry=False, monitoring=False

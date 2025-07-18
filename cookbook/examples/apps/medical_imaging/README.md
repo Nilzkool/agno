@@ -7,6 +7,7 @@ Medical Imaging Diagnosis Agent is a medical imaging analysis agent that analyze
 ```shell
 ./scripts/cookbook_setup.py
 source ./agnoenv/bin/activate
+```
 
 ### 2. Install requirements
 

@@ -27,7 +27,7 @@ agent = Agent(
     # Store memories in a database
     memory=memory,
     # Give the Agent the ability to update memories
-    enable_agentic_memory=True,
+    enable_user_memories=True,
     # Store the chat history in the database
     storage=storage,
     # Add chat history to the messages

@@ -1,6 +1,6 @@
 """
-1. Run: `pip install openai duckduckgo-search newspaper4k lxml_html_clean agno` to install the dependencies
-2. Run: `python cookbook/storage/json_storage/json_storage_for_team.py` to run the team
+1. Run: `pip install openai agno redis newspaper4k lxml_html_clean` to install the dependencies
+2. Run: `python cookbook/storage/redis_storage/redis_storage_for_workflow.py` to run the workflow
 
 We can start Redis locally using docker:
 1. Start Redis container

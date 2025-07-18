@@ -4,3 +4,4 @@ openai
 streamlit
 pillow
 duckduckgo-search
+python-dotenv

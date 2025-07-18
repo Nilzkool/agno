@@ -1,6 +1,7 @@
 from typing import Iterator
 
-from agno.agent import Agent, RunResponse
+from agno.agent import Agent
+from agno.run.team import TeamRunResponse
 from agno.models.openai import OpenAIChat
 from agno.team.team import Team
 from agno.tools.yfinance import YFinanceTools
@@ -14,7 +15,6 @@ stock_searcher = Agent(
     tools=[YFinanceTools()],
 )
 
-
 team = Team(
     name="Stock Research Team",
     mode="route",
@@ -25,12 +25,12 @@ team = Team(
     show_members_responses=True,
 )
 
-
-run_stream: Iterator[RunResponse] = team.run(
+# Streaming run returns TeamRunResponse objects
+run_stream: Iterator[TeamRunResponse] = team.run(
     "What is the stock price of NVDA", stream=True
 )
+# Pretty-print the streaming response
 pprint_run_response(run_stream, markdown=True)
-
 
 print("---" * 5, "Team Leader Message Metrics", "---" * 5)
 # Print metrics per message for lead agent
@@ -45,15 +45,13 @@ if team.run_response.messages:
             pprint(message.metrics)
             print("---" * 20)
 
-
-# Print the metrics
+# Print the aggregated metrics of the team leader
 print("---" * 5, "Aggregated Metrics of Team Agent", "---" * 5)
 pprint(team.run_response.metrics)
 
 # Print the session metrics
 print("---" * 5, "Session Metrics", "---" * 5)
 pprint(team.session_metrics)
-
 
 print("---" * 5, "Team Member Message Metrics", "---" * 5)
 # Print metrics per member per message
@@ -70,7 +68,6 @@ if team.run_response.member_responses:
                     pprint(message.metrics)
                     print("---" * 20)
 
-
-# Print the session metrics
+# Print the full team session metrics
 print("---" * 5, "Full Team Session Metrics", "---" * 5)
 pprint(team.full_team_session_metrics)

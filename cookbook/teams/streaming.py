@@ -30,7 +30,6 @@ company_info_agent = Agent(
     ],
 )
 
-
 team = Team(
     name="Stock Research Team",
     mode="route",
@@ -40,4 +39,7 @@ team = Team(
     show_members_responses=True,
 )
 
-team.print_response("What is the current stock price of NVDA?", stream=True)
+# Stream responses and print each chunk
+response_stream = team.run("What is the current stock price of NVDA?", stream=True)
+for chunk in response_stream:
+    print(chunk.content)

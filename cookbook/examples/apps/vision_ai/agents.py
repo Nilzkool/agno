@@ -9,6 +9,8 @@ def image_processing_agent(
         name="image_analysis_agent",
         model=model,
         markdown=True,
+        telemetry=False,
+        monitoring=False,
     )
 
     return extraction_agent
@@ -28,6 +30,8 @@ def chat_followup_agent(
         num_history_responses=5,
         markdown=True,
         add_datetime_to_instructions=True,
+        telemetry=False,
+        monitoring=False,
     )
 
     return followup_agent

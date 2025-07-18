@@ -77,8 +77,7 @@ def get_mcp_agent(
 
     if mcp_server_ids:
         description += dedent(
-            """\n
-            You have access to the following MCP servers:
+            """\n            You have access to the following MCP servers:
             {}
         """.format("\n".join([f"- {server_id}" for server_id in mcp_server_ids]))
         )
@@ -144,7 +143,7 @@ def get_model_for_provider(model_str: str):
     Creates and returns the appropriate model for a model string.
 
     Args:
-        model_str: The model string (e.g., 'openai:gpt-4o', 'google:gemini-2.0-flash', 'anthropic:claude-3-5-sonnet', 'groq:llama-3.3-70b-versatile')
+        model_str: The model string (e.g., 'openai:gpt-4o', 'gemini:gemini-2.0-flash', 'anthropic:claude-3-5-sonnet', 'groq:llama-3.3-70b-versatile')
 
     Returns:
         An instance of the appropriate model class

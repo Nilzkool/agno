@@ -3,7 +3,7 @@ How to search for user memories using different retrieval methods
 
 - last_n: Retrieves the last n memories
 - first_n: Retrieves the first n memories
-- semantic: Retrieves memories using semantic search
+- agentic: Retrieves memories using agentic search
 """
 
 from agno.memory.v2 import Memory, UserMemory

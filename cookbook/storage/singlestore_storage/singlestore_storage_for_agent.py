@@ -1,4 +1,4 @@
-"""Run `pip install duckduckgo-search sqlalchemy openai` to install dependencies."""
+"""Run `pip install agno openai sqlalchemy pymysql duckduckgo-search` to install dependencies."""
 
 import os
 from os import getenv

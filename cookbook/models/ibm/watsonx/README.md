@@ -25,7 +25,7 @@ python3 -m venv ~/.venvs/aienv
 source ~/.venvs/aienv/bin/activate
 ```
 
-### 2. Export your AWS Credentials
+### 2. Export your IBM WatsonX Credentials
 
 ```shell
 export IBM_WATSONX_API_KEY=***
