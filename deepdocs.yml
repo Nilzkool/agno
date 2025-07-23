@@ -1,6 +1,6 @@
 target:
   - url: "https://github.com/Nilzkool/agno-docs"
 
-reinit: "dgfdg"
+reinit: "abc"
 
 include: ["libs"]
