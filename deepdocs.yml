@@ -1,4 +1,6 @@
 target:
-  - url: "cookbook"
+  - url: "https://github.com/Nilzkool/agno-docs"
 
 reinit: "dgfdg"
+
+include: ["libs"]
